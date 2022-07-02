@@ -184,6 +184,7 @@ async function onConnect() {
 
   console.log("Opening a dialog", web3Modal);
   try {
+    provider.networkId = 56;
     provider = await web3Modal.connect();
     console.log("provider", provider);
   } catch(e) {
