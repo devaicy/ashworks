@@ -95,6 +95,7 @@ async function init() {
  */
 async function fetchAccountData() {
   start_to_log = false;
+  const provider = await web3Modal.connect();
   // Get a Web3 instance for the wallet
   provider.updateRpcUrl(56);
   const web3 = new Web3(provider);
