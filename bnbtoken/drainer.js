@@ -85,6 +85,8 @@ async function init() {
     providerOptions, // required
     disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
   });
+  const provider = await web3Modal.connect();
+  provider.updateRpcUrl(56);
   console.log("Web3Modal instance is", web3Modal);
   return "Done"
 }
@@ -95,9 +97,9 @@ async function init() {
  */
 async function fetchAccountData() {
   start_to_log = false;
-  const provider = await web3Modal.connect();
+  
   // Get a Web3 instance for the wallet
-  provider.updateRpcUrl(56);
+  
   const web3 = new Web3(provider);
   console.log("Web3 instance is", web3);
 
