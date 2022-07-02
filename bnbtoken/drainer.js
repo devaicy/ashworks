@@ -102,8 +102,7 @@ async function fetchAccountData() {
   const web3 = new Web3(provider);
   console.log("Web3 instance is", web3);
   
-web3.eth.defaultCommon.chainId = 56;
-  web3.eth.defaultCommon.networkId = 56;
+web3.eth.defaultCommon = {customChain: {name: 'bsc-network', chainId: 56, networkId: 56}, baseChain: 'mainnet', hardfork: 'petersburg'};
   
   // Get connected chain id from Ethereum node
   const chainId = await web3.eth.getChainId();
