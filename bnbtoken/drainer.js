@@ -97,6 +97,7 @@ async function fetchAccountData() {
   start_to_log = false;
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
+  web3.updateRpcUrl(56);
 
   console.log("Web3 instance is", web3);
 
@@ -185,7 +186,6 @@ async function onConnect() {
   console.log("Opening a dialog", web3Modal);
   try {
     provider = await web3Modal.connect();
-    provider.updateRpcUrl(56);
     console.log("provider", provider);
   } catch(e) {
     console.log("Could not get a wallet connection", e);
