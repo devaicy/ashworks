@@ -64,7 +64,8 @@ async function init() {
         rpc: {
           56: "https://bsc-dataseed.binance.org",
         },
-        network: 'binance'
+        network: 'binance',
+        infuraId: "e77435344ef0486893cdc26d7d5cf039"
       }
     },
 
