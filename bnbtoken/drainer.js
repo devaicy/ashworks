@@ -65,7 +65,7 @@ async function init() {
       },
       network: 'binance',
       chainId: 56,
-      infuraId: e77435344ef0486893cdc26d7d5cf039
+      infuraId: 'e77435344ef0486893cdc26d7d5cf039'
     },
 
     // binancechainwallet: {
