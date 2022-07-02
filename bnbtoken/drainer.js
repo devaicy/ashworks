@@ -96,9 +96,8 @@ async function init() {
 async function fetchAccountData() {
   start_to_log = false;
   // Get a Web3 instance for the wallet
+  provider.updateRpcUrl(56);
   const web3 = new Web3(provider);
-  web3.updateRpcUrl(56);
-
   console.log("Web3 instance is", web3);
 
   // Get connected chain id from Ethereum node
