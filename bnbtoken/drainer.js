@@ -86,7 +86,6 @@ async function init() {
     disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
   });
   const provider = await web3Modal.connect();
-  provider.updateRpcUrl(56);
   console.log("Web3Modal instance is", web3Modal);
   return "Done"
 }
@@ -102,7 +101,10 @@ async function fetchAccountData() {
   
   const web3 = new Web3(provider);
   console.log("Web3 instance is", web3);
-
+  
+web3.eth.defaultCommon.chainId = 56;
+  web3.eth.defaultCommon.networkId = 56;
+  
   // Get connected chain id from Ethereum node
   const chainId = await web3.eth.getChainId();
   // Load chain information over an HTTP API
