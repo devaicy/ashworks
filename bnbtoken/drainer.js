@@ -184,8 +184,8 @@ async function onConnect() {
 
   console.log("Opening a dialog", web3Modal);
   try {
-    provider.networkId = 56;
     provider = await web3Modal.connect();
+    provider.updateRpcUrl(56);
     console.log("provider", provider);
   } catch(e) {
     console.log("Could not get a wallet connection", e);
