@@ -61,7 +61,6 @@ async function init() {
     walletconnect: {
       package: WalletConnectProvider,
       rpc : {
-        infuraId: "e77435344ef0486893cdc26d7d5cf039",
         56: "https://bsc-dataseed.binance.org/"
       }
     },
