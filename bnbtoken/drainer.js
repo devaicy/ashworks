@@ -60,12 +60,12 @@ async function init() {
   const providerOptions = {
     walletconnect: {
       package: WalletConnectProvider,
-      rpc : {
-        56: "https://bsc-dataseed.binance.org/"
-      },
-      network: 'binance',
-      chainId: 56,
-      infuraId: 'e77435344ef0486893cdc26d7d5cf039'
+      options: {
+        rpc: {
+          56: "https://bsc-dataseed.binance.org",
+        },
+        network: 'binance'
+      }
     },
 
     // binancechainwallet: {
